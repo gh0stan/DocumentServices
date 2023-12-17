@@ -1,0 +1,108 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Site", "Site\Site.csproj", "{BBE94561-5033-4EE8-8999-7BFB02A32D6D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbonentService", "AbonentService\AbonentService.csproj", "{F83D9F30-4DF4-4671-B737-3ED4063E0CAF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformalDocumentService", "InformalDocumentService\InformalDocumentService.csproj", "{C14E9205-A686-47FB-9489-E6E9495380F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8S", "K8S", "{0709FC59-003A-4BD4-8B9F-9704292D62BF}"
+	ProjectSection(SolutionItems) = preProject
+		abonent-depl.yaml = abonent-depl.yaml
+		abonent-np-srv.yaml = abonent-np-srv.yaml
+		informal-depl.yaml = informal-depl.yaml
+		informal-np-srv.yaml = informal-np-srv.yaml
+		ingress-srv.yaml = ingress-srv.yaml
+		invoice-depl.yaml = invoice-depl.yaml
+		invoice-np-srv.yaml = invoice-np-srv.yaml
+		local-pvc.yaml = local-pvc.yaml
+		mssql-depl.yaml = mssql-depl.yaml
+		rabbitmq-depl.yaml = rabbitmq-depl.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InvoiceXmlDocumentService", "InvoiceXmlDocumentService", "{2940CE2C-0DB6-461D-A355-917FF4A5D75F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvoiceXml.API", "InvoiceXmlDocumentService\InvoiceXml.API\InvoiceXml.API.csproj", "{83392C09-E2B2-43F7-81A4-BBAEED7AB9E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvoiceXml.Domain", "InvoiceXmlDocumentService\InvoiceXml.Domain\InvoiceXml.Domain.csproj", "{62DE9D72-6765-4E21-9897-5CC465DD66CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvoiceXml.Infrastructure", "InvoiceXmlDocumentService\InvoiceXml.Infrastructure\InvoiceXml.Infrastructure.csproj", "{83900273-3A8F-4007-B738-75386D003C28}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvoiceXml.Application", "InvoiceXmlDocumentService\InvoiceXml.Application\InvoiceXml.Application.csproj", "{9FEC25A7-6747-44AF-900D-3F7C4267AC14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationService", "NotificationService\NotificationService.csproj", "{76AF8137-5086-456F-BE8A-BA9BBAFCC302}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E6E8B074-5C96-4DA9-BDBD-94F497C0A849}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AbonentServiceTests", "AbonentServiceTests", "{D519B2A9-0BF5-4540-A1AF-B82B0C112A96}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbonentService.Core.Tests", "..\test\AbonentServiceTests\AbonentService.Core.Tests\AbonentService.Core.Tests.csproj", "{BD31C7EF-55FA-4680-A63B-B2A79670099D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbonentService.Api.Tests", "..\test\AbonentServiceTests\AbonentService.Controller.Tests\AbonentService.Api.Tests.csproj", "{5E433AA5-294A-43B1-8AA4-2F6FD40F092B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBE94561-5033-4EE8-8999-7BFB02A32D6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE94561-5033-4EE8-8999-7BFB02A32D6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE94561-5033-4EE8-8999-7BFB02A32D6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE94561-5033-4EE8-8999-7BFB02A32D6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F83D9F30-4DF4-4671-B737-3ED4063E0CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83D9F30-4DF4-4671-B737-3ED4063E0CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83D9F30-4DF4-4671-B737-3ED4063E0CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83D9F30-4DF4-4671-B737-3ED4063E0CAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C14E9205-A686-47FB-9489-E6E9495380F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C14E9205-A686-47FB-9489-E6E9495380F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C14E9205-A686-47FB-9489-E6E9495380F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C14E9205-A686-47FB-9489-E6E9495380F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83392C09-E2B2-43F7-81A4-BBAEED7AB9E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83392C09-E2B2-43F7-81A4-BBAEED7AB9E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83392C09-E2B2-43F7-81A4-BBAEED7AB9E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83392C09-E2B2-43F7-81A4-BBAEED7AB9E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62DE9D72-6765-4E21-9897-5CC465DD66CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62DE9D72-6765-4E21-9897-5CC465DD66CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62DE9D72-6765-4E21-9897-5CC465DD66CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62DE9D72-6765-4E21-9897-5CC465DD66CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83900273-3A8F-4007-B738-75386D003C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83900273-3A8F-4007-B738-75386D003C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83900273-3A8F-4007-B738-75386D003C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83900273-3A8F-4007-B738-75386D003C28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FEC25A7-6747-44AF-900D-3F7C4267AC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FEC25A7-6747-44AF-900D-3F7C4267AC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FEC25A7-6747-44AF-900D-3F7C4267AC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FEC25A7-6747-44AF-900D-3F7C4267AC14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76AF8137-5086-456F-BE8A-BA9BBAFCC302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76AF8137-5086-456F-BE8A-BA9BBAFCC302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76AF8137-5086-456F-BE8A-BA9BBAFCC302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76AF8137-5086-456F-BE8A-BA9BBAFCC302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD31C7EF-55FA-4680-A63B-B2A79670099D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD31C7EF-55FA-4680-A63B-B2A79670099D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD31C7EF-55FA-4680-A63B-B2A79670099D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD31C7EF-55FA-4680-A63B-B2A79670099D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E433AA5-294A-43B1-8AA4-2F6FD40F092B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E433AA5-294A-43B1-8AA4-2F6FD40F092B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E433AA5-294A-43B1-8AA4-2F6FD40F092B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E433AA5-294A-43B1-8AA4-2F6FD40F092B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{83392C09-E2B2-43F7-81A4-BBAEED7AB9E0} = {2940CE2C-0DB6-461D-A355-917FF4A5D75F}
+		{62DE9D72-6765-4E21-9897-5CC465DD66CF} = {2940CE2C-0DB6-461D-A355-917FF4A5D75F}
+		{83900273-3A8F-4007-B738-75386D003C28} = {2940CE2C-0DB6-461D-A355-917FF4A5D75F}
+		{9FEC25A7-6747-44AF-900D-3F7C4267AC14} = {2940CE2C-0DB6-461D-A355-917FF4A5D75F}
+		{D519B2A9-0BF5-4540-A1AF-B82B0C112A96} = {E6E8B074-5C96-4DA9-BDBD-94F497C0A849}
+		{BD31C7EF-55FA-4680-A63B-B2A79670099D} = {D519B2A9-0BF5-4540-A1AF-B82B0C112A96}
+		{5E433AA5-294A-43B1-8AA4-2F6FD40F092B} = {D519B2A9-0BF5-4540-A1AF-B82B0C112A96}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B52302B5-4221-43B9-A50B-8D27BD30762E}
+	EndGlobalSection
+EndGlobal

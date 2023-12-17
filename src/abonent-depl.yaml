@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: abonent-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: abonentservice
+  template:
+    metadata:
+      labels:
+        app: abonentservice
+    spec:
+      containers:
+        - name: abonentservice
+          image: ghostanx/abonentservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: abonents-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: abonentservice
+  ports:
+  - name: abonentservice
+    protocol: TCP
+    port: 80
+    targetPort: 80
+  - name: abonentgrpc
+    protocol: TCP
+    port: 678
+    targetPort: 678

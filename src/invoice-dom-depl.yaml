@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: invoicedom-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: invoicedomservice
+  template:
+    metadata:
+      labels:
+        app: invoicedomservice
+    spec:
+      containers:
+        - name: invoicedomservice
+          image: ghostanx/invoicedomservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: invoicedom-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: invoicedomservice
+  ports:
+  - name: invoicedomservice
+    protocol: TCP
+    port: 80
+    targetPort: 80

@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "AbonentService";
+
+service GrpcAbonent {
+    rpc GetAllAbonents (GetAllRequest) returns (AbonentResponse);
+}
+
+message GetAllRequest {}
+
+message GrpcAbonentModel {
+    int32 abonentId = 1;
+    string name = 2;
+}
+
+message AbonentResponse {
+    repeated GrpcAbonentModel abonent = 1;
+}

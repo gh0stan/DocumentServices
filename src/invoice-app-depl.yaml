@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: invoiceapp-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: invoiceappservice
+  template:
+    metadata:
+      labels:
+        app: invoiceappservice
+    spec:
+      containers:
+        - name: invoiceappservice
+          image: ghostanx/invoiceappservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: invoiceapp-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: invoiceappservice
+  ports:
+  - name: invoiceappservice
+    protocol: TCP
+    port: 80
+    targetPort: 80

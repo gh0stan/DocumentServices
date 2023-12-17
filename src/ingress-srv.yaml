@@ -1,0 +1,42 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-srv
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  rules:
+    - host: acme.com
+      http:
+        paths:
+          - path: /api/a/abonents
+            pathType: Prefix
+            backend:
+              service:
+                name: abonents-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/u/abonents
+            pathType: Prefix
+            backend:
+              service:
+                name: informaldocuments-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/u/informaldocuments
+            pathType: Prefix
+            backend:
+              service:
+                name: informaldocuments-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/x/documents
+            pathType: Prefix
+            backend:
+              service:
+                name: invoicexmlapi-clusterip-srv
+                port:
+                  number: 80
+
+              
